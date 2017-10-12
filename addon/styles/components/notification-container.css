@@ -1,8 +1,8 @@
 /* Values */
-@value --container-position: 10px;
-@value --container-position: 10px;
+@value --container-position: .5rem;
+@value --container-position: .5rem;
 @value --container-width: 80%;
-@value --container-max-with: 400px;
+@value --container-max-with: 720px;
 
 /* Base */
 .c-notification__container {
