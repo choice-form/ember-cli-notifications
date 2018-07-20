@@ -1,15 +1,15 @@
 /* Values */
 @value --container-position: .5rem;
 @value --container-position: .5rem;
-@value --container-width: 80%;
-@value --container-max-with: 720px;
+@value --large-width: 80%;
+@value --large-max-with: 720px;
+@value --small-width: 25%;
+@value --small-max-with: 360px;
 
 /* Base */
 .c-notification__container {
   position: fixed;
   margin: 0 auto;
-  width: --container-width;
-  max-width: --container-max-with;
 }
 
 /* Position */
@@ -18,6 +18,8 @@
   top: --container-position;
   right: 0;
   left: 0;
+  width: --large-width;
+  max-width: --large-max-with;
 }
 
 .c-notification__container--top-left {
@@ -25,6 +27,8 @@
   top: --container-position;
   right: auto;
   left: --container-position;
+  width: --small-width;
+  max-width: --small-max-with;
 }
 
 .c-notification__container--top-right {
@@ -32,6 +36,8 @@
   top: --container-position;
   right: --container-position;
   left: auto;
+  width: --small-width;
+  max-width: --small-max-with;
 }
 
 .c-notification__container--bottom {
@@ -39,6 +45,8 @@
   right: 0;
   bottom: --container-position;
   left: 0;
+  width: --large-width;
+  max-width: --large-max-with;
 }
 
 .c-notification__container--bottom-left {
@@ -46,6 +54,8 @@
   right: auto;
   bottom: --container-position;
   left: --container-position;
+  width: --small-width;
+  max-width: --small-max-with;
 }
 
 .c-notification__container--bottom-right {
@@ -53,4 +63,6 @@
   right: --container-position;
   bottom: --container-position;
   left: auto;
+  width: --small-width;
+  max-width: --small-max-with;
 }
