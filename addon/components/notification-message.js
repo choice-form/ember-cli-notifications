@@ -43,27 +43,15 @@ export default Component.extend({
   notificationIcon: computed('notification.type', 'icons', function() {
     const icons = this.get('icons');
 
-    if (icons === 'bootstrap') {
-      switch (this.get('notification.type')){
-        case "info":
-          return 'glyphicon glyphicon-info-sign';
-        case "success":
-          return 'glyphicon glyphicon-ok-sign';
-        case "warning":
-        case "error":
-          return 'glyphicon glyphicon-exclamation-sign';
-      }
-    }
-
     switch (this.get('notification.type')){
       case "info":
-        return 'fa fa-info-circle';
+        return 'ui-16px-2_alert-circle-i';
       case "success":
-        return 'fa fa-check';
+        return 'ui-16px-1_check-simple';
       case "warning":
-        return 'fa fa-warning';
+        return 'ui-16px-3_alert';
       case "error":
-        return 'fa fa-exclamation-circle';
+        return 'ui-16px-2_alert-circle-!';
     }
   }),
 
