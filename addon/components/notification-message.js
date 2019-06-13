@@ -45,13 +45,13 @@ export default Component.extend({
 
     switch (this.get('notification.type')){
       case "info":
-        return 'ui-16px-2_alert-circle-i';
+        return 'glyph-c-info-e-16';
       case "success":
-        return 'ui-16px-1_check-simple';
+        return 'glyph-f-check-16';
       case "warning":
-        return 'ui-16px-3_alert';
+        return 'glyph-t-warning-16';
       case "error":
-        return 'ui-16px-2_alert-circle-!';
+        return 'glyph-c-warning-e-16';
     }
   }),
 
