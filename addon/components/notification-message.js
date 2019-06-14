@@ -21,6 +21,8 @@ export default Component.extend({
 
   paused: false,
 
+  closeIcon: 'glyph-i-remove-16',
+
   dismissClass: computed('notification.dismiss', function() {
     if (!this.get('notification.dismiss')) return this.get('styles.c-notification--in');
 
