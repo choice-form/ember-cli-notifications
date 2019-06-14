@@ -35,12 +35,6 @@ export default Component.extend({
     return false;
   }),
 
-  closeIcon: computed('icons', function() {
-    if (this.get('icons') === 'bootstrap') return 'glyphicon glyphicon-remove';
-
-    return 'fa fa-times';
-  }),
-
   // Set icon depending on notification type
   notificationIcon: computed('notification.type', 'icons', function() {
     const icons = this.get('icons');
