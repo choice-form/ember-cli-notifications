@@ -1,21 +1,8 @@
 /* Values */
-@value --icon-width: 30px;
-@value --icon-position: 10px;
-@value --icon-color: color(#fff a(.74));
-@value --icon-lighten-background: color(#fff a(.2));
-@value --countdown-lighten-background: color(#fff a(.4));
+@value --icon-color: color(#fff a(.8));
+@value --icon-lighten-background: color(#fff a(.16));
+@value --countdown-lighten-background: color(#fff a(.32));
 @value --notification-max-height: 800px;
-@value --notification-border-radius: 3px;
-
-/* Colours */
-@value --red from '../addon';
-@value --blue from '../addon';
-@value --green from '../addon';
-@value --orange from '../addon';
-
-/* Spacing */
-@value --spacing-1 from '../addon';
-@value --spacing-2 from '../addon';
 
 /* Base */
 .c-notification {
@@ -23,13 +10,13 @@
   align-items: stretch;
   position: relative;
   overflow: hidden;
-  border-radius: --notification-border-radius;
-  border-bottom: 1rem;
-  color: white;
+  border-radius: var(--radius-medium);
+  border-bottom: var(--cells-1);
+  color: var(--primary-light-text);
   max-height: --notification-max-height;
   animation: notification-hide 250ms cubic-bezier(.33859, -.42, 1, -.22), notification-shrink 250ms 250ms cubic-bezier(.5, 0, 0, 1);
   animation-fill-mode: forwards;
-  margin-bottom: --spacing-2;
+  margin-bottom: var(--cells-1);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
 }
 
@@ -48,7 +35,7 @@
   min-height: 0;
   line-height: 1;
   justify-content: space-between;
-  padding: --spacing-2;
+  padding: var(--cells-1);
   word-break: break-word;
 
   & a {
@@ -60,14 +47,14 @@
 .c-notification__icon {
   display: flex;
   align-items: center;
-  padding: --spacing-2;
+  padding: var(--cells-1);
   flex: none;
   background-color: --icon-lighten-background;
   color: --icon-color;
 }
 
 .c-notification__close {
-  margin-left: --spacing-2;
+  margin-left: var(--cells-1);
   align-self: flex-start;
   opacity: .74;
   cursor: pointer;
@@ -91,22 +78,22 @@
 /* Theme */
 .c-notification--info {
   composes: c-notification;
-  background-color: --blue;
+  background-color: var(--primary-color);
 }
 
 .c-notification--success {
   composes: c-notification;
-  background-color: --green;
+  background-color: var(--secondary-color);
 }
 
 .c-notification--warning {
   composes: c-notification;
-  background-color: --orange;
+  background-color: var(--accent-color);
 }
 
 .c-notification--error {
   composes: c-notification;
-  background-color: --red;
+  background-color: var(--split-color);
 }
 
 /* Keyframes */

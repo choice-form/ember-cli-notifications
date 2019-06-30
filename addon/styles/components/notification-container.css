@@ -1,6 +1,6 @@
   /* Values */
-@value --container-position: .5rem;
-@value --container-position: .5rem;
+@value --container-position: var(--cells-05);
+@value --container-position: var(--cells-05);
 @value --large-width: 80%;
 @value --large-max-with: 720px;
 @value --small-width: 80%;
