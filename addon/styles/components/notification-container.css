@@ -1,4 +1,4 @@
-  /* Values */
+/* Values */
 @value --container-position: var(--cells-05);
 @value --container-position: var(--cells-05);
 @value --large-width: 80%;
@@ -7,50 +7,45 @@
 @value --small-max-with: 360px;
 
 /* Base */
-.c-notification__container {
+.ember-cli-notifications-notification__container {
   position: fixed;
   margin: 0 auto;
 }
 
 /* Position */
-.c-notification__container--top {
-  composes: c-notification__container;
-  top: --container-position;
+.ember-cli-notifications-notification__container--top {
+  top: var(--ecn-container-position);
   right: 0;
   left: 0;
   width: --large-width;
   max-width: --large-max-with;
 }
 
-.c-notification__container--top-left {
-  composes: c-notification__container;
-  top: --container-position;
+.ember-cli-notifications-notification__container--top-left {
+  top: var(--ecn-container-position);
   right: auto;
   left: --container-position;
   width: --small-width;
   max-width: --small-max-with;
 }
 
-.c-notification__container--top-right {
-  composes: c-notification__container;
-  top: --container-position;
-  right: --container-position;
+.ember-cli-notifications-notification__container--top-right {
+  top: var(--ecn-container-position);
+  right: var(--ecn-container-position);
   left: auto;
   width: --small-width;
   max-width: --small-max-with;
 }
 
-.c-notification__container--bottom {
-  composes: c-notification__container;
+.ember-cli-notifications-notification__container--bottom {
   right: 0;
-  bottom: --container-position;
+  bottom: var(--ecn-container-position);
   left: 0;
   width: --large-width;
   max-width: --large-max-with;
 }
 
-.c-notification__container--bottom-left {
-  composes: c-notification__container;
+.ember-cli-notifications-notification__container--bottom-left {
   right: auto;
   bottom: --container-position;
   left: --container-position;
@@ -58,10 +53,9 @@
   max-width: --small-max-with;
 }
 
-.c-notification__container--bottom-right {
-  composes: c-notification__container;
-  right: --container-position;
-  bottom: --container-position;
+.ember-cli-notifications-notification__container--bottom-right {
+  right: var(--ecn-container-position);
+  bottom: var(--ecn-container-position);
   left: auto;
   width: --small-width;
   max-width: --small-max-with;

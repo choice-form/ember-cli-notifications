@@ -7,10 +7,10 @@
   {{else}}
     {{notification.message}}
   {{/if}}
-  <div local-class="c-notification__close" {{action "removeNotification"}} title="Dismiss this notification">
+  <div local-class="c-notification__close" title="Dismiss this notification" {{action "removeNotification"}}>
     {{icon close-icon}}
   </div>
 </div>
 {{#if notification.autoClear}}
-  <div local-class="c-notification__countdown" style={{notificationClearDuration}}></div>
+  <div class="c-notification__countdown" style={{notificationClearDuration}}></div>
 {{/if}}
