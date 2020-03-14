@@ -67,13 +67,13 @@ export default class NotificationMessage extends Component {
   get processedType() {
     switch (this.notification.type) {
       case 'error':
-        return 'bg-red';
+        return 'bg-red-500';
       case 'info':
-        return 'bg-blue';
+        return 'bg-blue-500';
       case 'success':
-        return 'bg-green';
+        return 'bg-green-500';
       case 'warning':
-        return 'bg-yellow';
+        return 'bg-yellow-500';
     }
 
     return '';
