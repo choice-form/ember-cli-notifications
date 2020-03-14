@@ -1,2 +1,64 @@
-@import 'components/notification-container.css';
-@import 'components/notification-message.css';
+/* Values */
+.ui-notification__container .notification {
+  animation: notification-hide 250ms cubic-bezier(0.33859, -0.42, 1, -0.22),
+    notification-shrink 250ms 250ms cubic-bezier(0.5, 0, 0, 1);
+  animation-fill-mode: forwards;
+}
+
+.ui-notification__container .notification.dismiss-in {
+  animation: notification-show 180ms cubic-bezier(0.175, 0.885, 0.32, 1.27499);
+}
+
+.ui-notification__container .notification__countdown {
+  height: 2px;
+  animation: notification-countdown linear 1;
+}
+
+/* Keyframes */
+@keyframes notification-show {
+  0% {
+    opacity: 0;
+    transform: perspective(450px) translate(0, -30px) rotateX(90deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: perspective(450px) translate(0, 0) rotateX(0deg);
+  }
+}
+
+@keyframes notification-shrink {
+  0% {
+    opacity: 0;
+    max-height: 100vh;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 0;
+    max-height: 0;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes notification-hide {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes notification-countdown {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}

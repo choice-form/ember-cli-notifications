@@ -1,0 +1,48 @@
+{{#if this.notificationSVGPath}}
+  <svg
+    height="24"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path fill="currentColor" d={{this.notificationSVGPath}}></path>
+  </svg>
+{{/if}}
+<div
+  class="flex justify-between py-2 break-word"
+  {{action "handleOnClick"}}
+  {{on "mouseenter" (action "handleMouseEnter")}}
+  {{on "mouseleave" (action "handleMouseLeave")}}
+>
+  {{#if notification.htmlContent}}
+    {{{notification.message}}}
+  {{else}}
+    {{notification.message}}
+  {{/if}}
+</div>
+<div
+  role="button"
+  aria-label="Dismiss this notification"
+  class="w-8 h-8 flex items-center justify-center opacity-50 hover:opacity-100"
+  {{action "removeNotification" bubbles=false}}
+>
+  <svg
+    height="12"
+    viewBox="0 0 12 12"
+    width="12"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill="currentColor"
+      d="M10.707,1.293a1,1,0,0,0-1.414,0L6,4.586,2.707,1.293A1,1,0,0,0,1.293,2.707L4.586,6,1.293,9.293a1,1,0,1,0,1.414,1.414L6,7.414l3.293,3.293a1,1,0,0,0,1.414-1.414L7.414,6l3.293-3.293A1,1,0,0,0,10.707,1.293Z"
+    ></path>
+  </svg>
+</div>
+{{#if notification.autoClear}}
+  <div
+    class="notification__countdown bg-white opacity-25 absolute bottom-0 left-0 w-0"
+    style={{notificationClearDuration}}
+  ></div>
+{{/if}}
